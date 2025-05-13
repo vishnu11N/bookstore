@@ -25,10 +25,13 @@ public class BookStoreController {
 	public ResponseEntity<List<BooksDto>> getBooks()
 	{
 		BooksDto book = BooksDto.builder()
-				.bookName("Nakka the cartoon").build();
+				.bookName("Nakka the cartoon").authorName("Nakka").build();
 		
+		BooksDto book2 = BooksDto.builder()
+				.bookName("vishnu the cartoon").build();
 		List<BooksDto> books = new ArrayList<>();
 		books.add(book);
+		books.add(book2);
 		return ResponseEntity.ok(books);
 		
 		
