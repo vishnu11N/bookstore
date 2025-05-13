@@ -1,4 +1,7 @@
 language: java
 jdk:
 -openjdk21
-
+branches:
+  only:
+    - master  # or your branch name
+script: mvn clean install
